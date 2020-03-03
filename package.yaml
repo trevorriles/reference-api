@@ -1,0 +1,17 @@
+spec-version: 0.30.0
+name: reference-api
+author: trevorriles
+maintainer: trevor@trevorriles.com
+license: MIT
+
+build-type: Simple
+
+source-dirs: src
+dependencies:
+    - { name: "base", version: '>=4.12 && <4.13' }
+
+ghc-options: -Wall
+
+library: {}
+executable:
+    main: Main.hs
