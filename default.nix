@@ -1,7 +1,7 @@
 let
   sources = import ./nix/sources.nix;
   compilerVersion = "ghc865";
-  pkgs = (import sources.iohk-nixpkgs) (import sources.iohk-hnix);
+  pkgs = (import sources.nixpkgs) (import sources."haskell.nix");
 in
 pkgs.haskell-nix.cabalProject {
   src = pkgs.haskell-nix.haskellLib.cleanGit { src = ./.; };
