@@ -1,4 +1,4 @@
-{ mkDerivation, base, hpack, stdenv, pkgs, ... }:
+{ mkDerivation, base, hpack, stdenv, ... }:
 mkDerivation {
   pname = "reference-api";
   version = "0.0.0";
