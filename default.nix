@@ -1,13 +1,6 @@
-{ mkDerivation, base, hpack, stdenv, pkgs, ... }:
-mkDerivation {
-  pname = "reference-api";
-  version = "0.0.0";
-  src = ./.;
-  isLibrary = false;
-  isExecutable = true;
-  libraryHaskellDepends = [ base ];
-  libraryToolDepends = [ hpack ];
-  executableHaskellDepends = [ base ];
-  prePatch = "hpack";
-  license = stdenv.lib.licenses.mit;
-}
+{ system ? builtins.currentSystem }:
+let
+  sources = import ./nix/sources.nix;
+  pkgs =import sources.nixpkgs { inherit system; };
+in
+  pkgs.haskellPackages.callPackage ./app.nix { }

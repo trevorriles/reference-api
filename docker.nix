@@ -2,7 +2,7 @@
 let
   sources = import ./nix/sources.nix;
   pkgs =import sources.nixpkgs { inherit system; };
-  app = pkgs.haskellPackages.callPackage ./default.nix { inherit pkgs; };
+  app = pkgs.haskellPackages.callPackage ./app.nix { inherit pkgs; };
   staticApp = pkgs.haskell.lib.justStaticExecutables app;
 in
   pkgs.dockerTools.buildLayeredImage {
