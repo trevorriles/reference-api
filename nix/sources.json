@@ -1,28 +1,4 @@
 {
-    "ghcide-nix": {
-        "branch": "master",
-        "description": "Nix installation for ghcide",
-        "homepage": "https://github.com/digital-asset/ghcide",
-        "owner": "hercules-ci",
-        "repo": "ghcide-nix",
-        "rev": "c940edd61eedba6750671fc142c9422cced73528",
-        "sha256": "01f2x5sgncd468h99w3mpkkb1203akachm12czmiwbvgishf7dwp",
-        "type": "tarball",
-        "url": "https://github.com/hercules-ci/ghcide-nix/archive/c940edd61eedba6750671fc142c9422cced73528.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
-    },
-    "haskell.nix": {
-        "branch": "master",
-        "description": "Alternative Haskell Infrastructure for Nixpkgs",
-        "homepage": "https://input-output-hk.github.io/haskell.nix",
-        "owner": "input-output-hk",
-        "repo": "haskell.nix",
-        "rev": "a93486531cdd1044520feec79c9a29af2cb92d8f",
-        "sha256": "0mbfs1cxv83gpfafpnfkf4rihsznnq5mbhfh1r9g9z60qv9llg7z",
-        "type": "tarball",
-        "url": "https://github.com/input-output-hk/haskell.nix/archive/a93486531cdd1044520feec79c9a29af2cb92d8f.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
-    },
     "niv": {
         "branch": "master",
         "description": "Easy dependency management for Nix projects",
