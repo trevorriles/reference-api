@@ -2,4 +2,5 @@
 let
   sources = import ./nix/sources.nix;
   pkgs =import sources.nixpkgs { inherit system; };
-in pkgs.haskellPackages.callPackage ./app.nix { }
+  app = pkgs.haskellPackages.callPackage ./app.nix { };
+in pkgs.haskell.lib.justStaticExecutables app

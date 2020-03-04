@@ -2,11 +2,10 @@
 let
   sources = import ./nix/sources.nix;
   pkgs =import sources.nixpkgs { inherit system; };
-  app = pkgs.haskellPackages.callPackage ./app.nix { inherit pkgs; };
-  staticApp = pkgs.haskell.lib.justStaticExecutables app;
+  app = pkgs.haskellPackages.callPackage ./app.nix { };
 in
   pkgs.dockerTools.buildLayeredImage {
     name = "app";
     tag = "latest";
-    config.Cmd = [ "${staticApp}/bin/reference-api" ];
+    config.Cmd = [ "${app}/bin/reference-api" ];
   }
